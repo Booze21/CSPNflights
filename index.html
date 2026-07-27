@@ -10,7 +10,7 @@
   <!-- theme-color задан белым намеренно: он окрашивает системные полосы
        Android. Зелёный здесь и давал полосу внизу экрана. -->
   <meta name="theme-color" content="#FFFFFF">
-  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon2.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -1683,7 +1683,7 @@
        with nothing else already reserving the status-bar area — i.e.
        installed as a standalone PWA, truly edge-to-edge. In a normal
        mobile browser tab the browser chrome already sits above the page
-       (env() is 0 there anyway), and inside the CSPNflights app's WebView the
+       (env() is 0 there anyway), and inside the TMbilet app's WebView the
        native shell already reserves that exact space before the page
        ever paints — adding this on top of that doubled the gap above the
        logo row. Scoped to mobile widths only; desktop is unaffected
@@ -1716,7 +1716,7 @@
        #destinationGrid in the DOM. Since the visible destinations section
        was removed, that lookup returned null and (if unchecked) app.js
        likely threw before ever reaching later setup, breaking the
-       search → avia.cspn.site redirect and the entered-data reset.
+       search → avia.tmbilet.com redirect and the entered-data reset.
        This kept-empty, hidden div gives app.js something to find so its
        later code can still run. Proper fix is a null-check in app.js
        itself — remove this once that's in place. -->
@@ -2048,7 +2048,7 @@
       <div class="wrap">
         <h2 data-i18n="app_download_title">Get the CSPNflights app</h2>
         <p data-i18n="app_download_sub">Search, book, and manage your trips faster — right from your phone.</p>
-        <a href="https://pub-aa81816ca24242a28b78be3de6c249d5.r2.dev/TMbilet.apk" download="CSPNflights.apk"
+        <a href="https://pub-aa81816ca24242a28b78be3de6c249d5.r2.dev/TMbilet.apk" download="TMbilet.apk"
           class="btn btn-primary btn-download-apk">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round">
@@ -2112,7 +2112,7 @@
   }
   </script>
   <script data-cfasync="false">
-    window.CSPN_CONFIG = {
+    window.TMBILET_CONFIG = {
       searchHost: 'https://avia.cspn.site',
       searchPath: '/'
     };

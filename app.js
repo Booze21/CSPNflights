@@ -143,7 +143,7 @@
         applyLanguage(chosenLang);
         // Zapominaem ruchnoy vibor — pri sleduyushchem zahode ne budet menyatsya
         try {
-          localStorage.setItem('cspn_locale', JSON.stringify({ lang: chosenLang, currency: currentCurrency }));
+          localStorage.setItem('tmbilet_locale', JSON.stringify({ lang: chosenLang, currency: currentCurrency }));
         } catch (e) { }
         langDropdown.classList.remove('open');
         langTrigger.setAttribute('aria-expanded', 'false');
@@ -329,7 +329,7 @@
     function autoDetectLocale() {
       // Esli polzovatel uzhe vybral yazik vruchnuyu — ne menyaem
       try {
-        const saved = localStorage.getItem('cspn_locale');
+        const saved = localStorage.getItem('tmbilet_locale');
         if (saved) {
           const { lang, currency } = JSON.parse(saved);
           applyLanguage(lang);
@@ -404,7 +404,7 @@
       const returnDate = searchState.tripType === 'round' ? returnDateEl.value : '';
       if (searchState.tripType === 'round' && !returnDate) return null;
 
-      const cfg = window.CSPN_CONFIG || { searchHost: 'https://avia.cspn.site', searchPath: '/' };
+      const cfg = window.TMBILET_CONFIG || { searchHost: 'https://avia.cspn.site', searchPath: '/' };
       const base = cfg.searchHost.replace(/\/$/, '') + cfg.searchPath;
 
       const params = new URLSearchParams();

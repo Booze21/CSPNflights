@@ -1,5 +1,5 @@
 /**
- * CSPNflights Airport Search Engine v2.0
+ * TMbilet Airport Search Engine v2.0
  * Professional multilingual autocomplete — comparable to Aviasales quality.
  *
  * Architecture:
@@ -873,9 +873,9 @@
      3-row layout without touching any other CSS.
   =================================================================== */
   function injectStyles() {
-    if (document.getElementById('cspn-ac-styles')) return;
+    if (document.getElementById('tmb-ac-styles')) return;
     var style = document.createElement('style');
-    style.id = 'cspn-ac-styles';
+    style.id = 'tmb-ac-styles';
     style.textContent = [
       /* Widen the dropdown a little for 3-row layout */
       '.autocomplete-list { max-width: min(420px, 92vw); }',
@@ -925,7 +925,7 @@
   =================================================================== */
   function init() {
     if (typeof AIRPORTS === 'undefined' || !AIRPORTS.length) {
-      console.warn('[CSPNflights Search] AIRPORTS not found. Did airports.js load first?');
+      console.warn('[TMbilet Search] AIRPORTS not found. Did airports.js load first?');
       return;
     }
 

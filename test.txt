@@ -13,11 +13,11 @@
     <!-- Change from product.item to website -->
     <meta content="website" property="og:type">
     <!-- OG Image - use a proper 1200x630 image, not the favicon -->
-    <meta property="og:image" content="https://cspn.site/cspn-logo-search.png" />
-    <meta property="og:image:secure_url" content="https://cspn.site/cspn-logo-search.png" />
+    <meta property="og:image" content="https://pub-aa81816ca24242a28b78be3de6c249d5.r2.dev/tmbilet-logo-search" />
+    <meta property="og:image:secure_url" content="https://pub-aa81816ca24242a28b78be3de6c249d5.r2.dev/tmbilet-logo-search" />
     <meta property="og:image:type" content="image/png" />
-    <meta property="og:url" content="https://cspn.site/" /> 
-    <meta content="https://cspn.site/cspn-logo-search.png" property="og:image">
+    <meta property="og:url" content="https://tmbilet.com/" /> 
+    <meta content="https://pub-aa81816ca24242a28b78be3de6c249d5.r2.dev/tmbilet-logo-search" property="og:image">
 
     <meta content="Search Cheap Flights" name="twitter:title">
     <meta content="We search hundreds of travel sites at once to find the cheapest flights for you." name="twitter:description">
@@ -80,7 +80,7 @@
     <header class="tpwl-logo-header">
       <div class="tpwl-logo__wrapper">
         <div class="tpwl-logo__logo"></div>
-        CSPNflights
+        TMbilet
       </div>
 
       <div class="tpwl-search__wrapper">
