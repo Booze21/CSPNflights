@@ -526,7 +526,13 @@
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-md);
       position: relative;
-      overflow: hidden;
+      /* NOTE: no overflow:hidden here on purpose. This box holds the
+         airport autocomplete lists, both date-picker calendars, and the
+         passenger dropdown — all position:absolute children. overflow:hidden
+         on their clipping ancestor was cutting every one of those popups
+         off (display:block but zero visible area), which is why suggestions
+         never appeared while typing. Corner rounding for the pill shape is
+         handled below on the first/last field instead. */
     }
 
     .field {
@@ -543,6 +549,8 @@
 
     .field-from {
       flex: 1.15 1.15 0;
+      border-top-left-radius: var(--radius-lg);
+      border-bottom-left-radius: var(--radius-lg);
     }
 
     .field-to {
@@ -555,6 +563,8 @@
 
     .field-passengers {
       flex: 1 1 0;
+      border-top-right-radius: var(--radius-lg);
+      border-bottom-right-radius: var(--radius-lg);
     }
 
     .field-to,
